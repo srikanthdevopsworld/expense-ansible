@@ -14,7 +14,7 @@
       enabled: yes
 
   - name: connect to mysql server
-    community.mysql.mysql.info:
+    community.mysql.info:
       login_user: root
       login_password: ExpenseApp@1
       login_host: mysql.srikanthannam.space
