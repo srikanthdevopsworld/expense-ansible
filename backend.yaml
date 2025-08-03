@@ -4,5 +4,5 @@
   tasks:
   - name: disable noded js
     community.general.dnf_module:
-    name: nodejs
-    state: disabled
+      name: nodejs
+      state: disabled
