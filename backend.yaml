@@ -37,7 +37,6 @@
 
   - name: Install npm depedencies
     community.general.npm:
-      name: npm
       path: /app
   
   - name: install python libs
