@@ -7,6 +7,6 @@
       ansible.builtin.command: dnf install nginx -y
     - name: start mysql service
       ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
+        name: nginx
+        state: started
+        enabled: yes
