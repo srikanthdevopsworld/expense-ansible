@@ -4,8 +4,11 @@
 
   tasks:
     - name: install nginx
-      ansible.builtin.command: dnf install nginx -y
-    - name: start mysql service
+      ansible.builtin.dnf: 
+        name: nginx
+        state: installed
+
+    - name: start nginx service
       ansible.builtin.service:
         name: nginx
         state: started
@@ -15,6 +18,12 @@
       ansible.builtin.file:
         path: /usr/share/nginx/html/
         state: absent
+    
+    - name: create html directory
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: directory
+        
     - name: Download frontend code
       ansible.builtin.get_url:
         url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
