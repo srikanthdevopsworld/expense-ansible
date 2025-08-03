@@ -24,9 +24,9 @@
       path: /app
       state: directory
 
-  - name: Download foo.conf
+  - name: Download backed code
     ansible.builtin.get_url:
-      url: /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+      url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
       dest: /tmp/backend.zip
 
   - name: unzip file
