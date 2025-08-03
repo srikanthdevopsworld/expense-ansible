@@ -29,10 +29,10 @@
       url: /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
       dest: /tmp/backend.zip
 
-  - name: Extract foo.tgz into /var/lib/foo
+  - name: unzip file
     ansible.builtin.unarchive:
-    src: /tmp/backend.zip
-    dest: /app
+      src: /tmp/backend.zip
+      dest: /app
 
   - name: Install npm depedencies
     community.general.npm:
