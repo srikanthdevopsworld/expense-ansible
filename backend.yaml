@@ -33,6 +33,7 @@
     ansible.builtin.unarchive:
       src: /tmp/backend.zip
       dest: /app
+      remote_src: yes
 
   - name: Install npm depedencies
     community.general.npm:
